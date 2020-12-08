@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Logo from '../logo.png'
 
 const Header = () => {
     return (
@@ -7,7 +8,7 @@ const Header = () => {
             <div className="container">
                 <div className="brand">
                     <Link to="/">
-                        <h2>MYMovie</h2>
+                        <img src={Logo} />
                     </Link>
                 </div>
 

@@ -8,7 +8,7 @@
 }
 
 main {
-  min-height: 1000px;
+  min-height: 600px;
   padding: 0px 50px;
   background-color: #181818;
   color: white;
@@ -20,6 +20,10 @@ header .container {
   padding: 10px 50px;
   background-color: black;
   color: white;
+}
+
+header img {
+  width: 100px;
 }
 
 header a {
@@ -88,6 +92,7 @@ header .nav-links li:last-child {
 .list-movies a {
   text-decoration: none;
   color: white;
+  text-align: center;
 }
 
 .moviedetails__container {
@@ -112,4 +117,9 @@ header .nav-links li:last-child {
 
 .text-light {
   color: rgb(160, 160, 160);
+}
+
+.fas {
+  color: rgb(255, 94, 1);
+  margin-bottom: 20px;
 }

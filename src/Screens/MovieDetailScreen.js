@@ -25,9 +25,11 @@ const MovieDetailScreen = ({ match }) => {
             <div className="movie-detail">
                 <h1>
                     {movie.title} {" "}
-                    (<Moment format="YYYY">
-                        {movie.release_date}
-                    </Moment>)
+                    <span className="text-light">
+                        (<Moment format="YYYY">
+                            {movie.release_date}
+                        </Moment>)
+                    </span>
                 </h1>
                 
                 <p>
@@ -43,6 +45,8 @@ const MovieDetailScreen = ({ match }) => {
                         </>
                     ): null }
                 </p>
+
+                <i className="fas fa-star" /> {movie.vote_average}
 
                 <p className="tagline">
                     {movie.tagline}
