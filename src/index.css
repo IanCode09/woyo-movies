@@ -48,7 +48,8 @@ header .nav-links li:last-child {
   margin-right: 0;
 }
 
-.home__container {
+.home__container, 
+.moviedetails__container {
   padding-top: 50px;
 }
 
@@ -82,4 +83,33 @@ header .nav-links li:last-child {
 
 .movie-info p {
   margin-top: 10px;
+}
+
+.list-movies a {
+  text-decoration: none;
+  color: white;
+}
+
+.moviedetails__container {
+  padding: 50px;
+  display: flex;
+}
+
+.moviedetails__container img {
+  width: 350px;
+  margin-right: 50px;
+  border-radius: 20px;
+}
+
+.movie-detail h2 {
+  margin-top: 40px;
+}
+
+.movie-detail .tagline {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.text-light {
+  color: rgb(160, 160, 160);
 }
