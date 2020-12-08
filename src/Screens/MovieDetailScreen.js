@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Moment from 'react-moment';
 
 const MovieDetailScreen = ({ match }) => {
     const movieId = match.params.id
@@ -22,9 +23,18 @@ const MovieDetailScreen = ({ match }) => {
         <div className="moviedetails__container">
             <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
             <div className="movie-detail">
-                <h1>{movie.title} ({movie.release_date})</h1>
+                <h1>
+                    {movie.title} {" "}
+                    (<Moment format="YYYY">
+                        {movie.release_date}
+                    </Moment>)
+                </h1>
                 
-                <p>{movie.release_date}</p>
+                <p>
+                    <Moment format="MM/DD//YYYY">
+                        {movie.release_date}
+                    </Moment>
+                </p>
 
                 <p style={{ color: 'yellow', marginTop: 5, marginBottom: 15 }}>
                     {movie.status ? ( 
