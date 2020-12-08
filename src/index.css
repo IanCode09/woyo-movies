@@ -53,7 +53,8 @@ header .nav-links li:last-child {
 }
 
 .home__container, 
-.moviedetails__container {
+.moviedetails__container,
+.moviesearch__container {
   padding-top: 50px;
 }
 
@@ -79,10 +80,6 @@ header .nav-links li:last-child {
   width: 200px;
   margin: 15px;
   margin-bottom: 40px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
 }
 
 .movie-info p {
@@ -122,4 +119,30 @@ header .nav-links li:last-child {
 .fas {
   color: rgb(255, 94, 1);
   margin-bottom: 20px;
+}
+
+.input-wrapper input {
+  background-color: #c7d450;
+  outline: none;
+  margin-bottom: 30px;
+  color: black;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+  font-size: 15px;
+  width: 350px;
+}
+
+.movies img {
+  width: 150px;
+  border-radius: 10px;
+}
+
+.movie-data {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.movie-data .movie-data-info {
+  margin-left: 20px;
 }

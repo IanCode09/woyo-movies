@@ -21,7 +21,11 @@ const MovieDetailScreen = ({ match }) => {
 
     return (
         <div className="moviedetails__container">
-            <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+            {movie.poster_path ? (
+                <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+            ) : (
+                <img src="https://images.unsplash.com/photo-1490971588422-52f6262a237a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80" />
+            )}
             <div className="movie-detail">
                 <h1>
                     {movie.title} {" "}
