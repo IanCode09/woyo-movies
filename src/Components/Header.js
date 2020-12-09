@@ -26,8 +26,8 @@ const Header = () => {
                     </li>
 
                     <li>
-                        <Link to="/watchlist">
-                            Watched
+                        <Link to="#">
+                            Login
                         </Link>
                     </li>
                 </ul>
