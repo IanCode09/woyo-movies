@@ -44,7 +44,7 @@ const MovieDetailScreen = ({ match }) => {
                 </h1>
                 
                 <p>
-                    <Moment format="MM/DD//YYYY">
+                    <Moment format="MM/DD/YYYY">
                         {movie.release_date}
                     </Moment>
                 </p>

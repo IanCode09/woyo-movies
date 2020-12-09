@@ -20,12 +20,6 @@ const Header = () => {
                     </li>
 
                     <li>
-                        <Link to="/searchactor">
-                            Search Actor
-                        </Link>
-                    </li>
-
-                    <li>
                         <Link to="/watchlist">
                             Watchlist
                         </Link>
