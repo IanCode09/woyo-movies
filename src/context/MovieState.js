@@ -3,14 +3,19 @@ import { MovieReducer } from '../reducer/MovieReducer'
 import { ADD_MOVIE_TO_WATCHLIST } from '../constants/movieConstants'
 
 const initialState = {
-    movieWatchList: [],
-    movieWatched: []
+    movieWatchList: localStorage.getItem("movieWatchList") 
+                    ? JSON.parse(localStorage.getItem("movieWatchList")) 
+                    : [],
 }
 
 export const MovieContext = createContext(initialState)
 
 export const MovieProvider = props => {
     const [state, dispatch] = useReducer(MovieReducer, initialState)
+
+    useEffect(() => {
+        localStorage.setItem("movieWatchList", JSON.stringify(state.movieWatchList))
+    }, [state])
 
     const addMovieToWatchList = (movie) => {
         dispatch({

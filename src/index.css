@@ -78,7 +78,8 @@ header .nav-links li:last-child {
 
 .home__container, 
 .moviedetails__container,
-.moviesearch__container {
+.moviesearch__container,
+.wathclist__container {
   padding-top: 50px;
 }
 
