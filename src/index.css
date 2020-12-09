@@ -7,6 +7,30 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.btn {
+  padding: 10px 25px;
+}
+
+.btn-primary {
+  cursor: pointer;
+  background-color: #810dce;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-size: 15px;
+  outline: none;
+}
+
+.btn-primary:hover {
+  background-color: #5f0899;
+}
+
+.btn:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 main {
   min-height: 600px;
   padding: 0px 50px;

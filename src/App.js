@@ -4,18 +4,21 @@ import Header from './Components/Header'
 import HomeScreen from './Screens/HomeScreen'
 import MovieDetailScreen from './Screens/MovieDetailScreen'
 import MovieSearch from './Screens/MovieSearch'
+import { MovieProvider } from './context/MovieState'
 
 function App() {
   return (
-    <Router>
-        <Header />
+    <MovieProvider>
+      <Router>
+          <Header />
 
-        <main>
-          <Route path="/" exact component={HomeScreen} />
-          <Route path="/movie/:id" component={MovieDetailScreen} />
-          <Route path="/searchMovie" component={MovieSearch} />
-        </main>
-    </Router>
+          <main>
+            <Route path="/" exact component={HomeScreen} />
+            <Route path="/movie/:id" component={MovieDetailScreen} />
+            <Route path="/searchMovie" component={MovieSearch} />
+          </main>
+      </Router>
+    </MovieProvider>
   );
 }
 

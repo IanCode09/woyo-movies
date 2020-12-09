@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import Moment from 'react-moment';
+import { MovieContext } from '../context/MovieState'
 
 const MovieDetailScreen = ({ match }) => {
     const movieId = match.params.id
@@ -18,6 +19,12 @@ const MovieDetailScreen = ({ match }) => {
     useEffect(() => {
         getMovie()
     }, [])    
+
+    const { movieWatchList, addMovieToWatchList } = useContext(MovieContext)
+
+    let watchList = movieWatchList.find((movieList) => movieList.id === movie.id)
+
+    const btnWatchListDisabled = watchList ? true : false
 
     return (
         <div className="moviedetails__container">
@@ -64,6 +71,14 @@ const MovieDetailScreen = ({ match }) => {
                 >
                     {movie.overview}
                 </p>
+                    
+                <button 
+                    className="btn btn-primary"
+                    disabled={btnWatchListDisabled}
+                    onClick={() => addMovieToWatchList(movie)}
+                >
+                    <i className="far fa-bookmark" /> Add to Watchlist
+                </button>
             </div>
         </div>
     )
