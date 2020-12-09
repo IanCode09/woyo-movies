@@ -18,6 +18,7 @@
   border: none;
   border-radius: 8px;
   margin-top: 20px;
+  margin-right: 10px;
   font-size: 15px;
   outline: none;
 }
@@ -30,6 +31,27 @@
   pointer-events: none;
   opacity: 0.5;
 }
+
+.btn-secondary {
+  cursor: pointer;
+  background-color: #cf1800;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 20px;
+  font-size: 15px;
+  outline: none;
+}
+
+.btn-secondary:hover {
+  background-color: #b41602;
+}
+
+.btn:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
 
 main {
   min-height: 600px;

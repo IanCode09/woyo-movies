@@ -20,11 +20,11 @@ const MovieDetailScreen = ({ match }) => {
         getMovie()
     }, [])    
 
-    const { movieWatchList, addMovieToWatchList } = useContext(MovieContext)
+    const { movieWatchList, addMovieToWatchList, removeFromWatchList } = useContext(MovieContext)
 
-    let watchList = movieWatchList.find((movieList) => movieList.id === movie.id)
+    const watchList = movieWatchList.find((movieList) => movieList.id === movie.id)
 
-    const btnWatchListDisabled = watchList ? true : false
+    // const btnWatchListDisabled = watchList ? true : false
 
     return (
         <div className="moviedetails__container">
@@ -71,14 +71,23 @@ const MovieDetailScreen = ({ match }) => {
                 >
                     {movie.overview}
                 </p>
-                    
-                <button 
-                    className="btn btn-primary"
-                    disabled={btnWatchListDisabled}
-                    onClick={() => addMovieToWatchList(movie)}
-                >
-                    <i className="far fa-bookmark" /> Add to Watchlist
-                </button>
+                
+                {!watchList ? ( 
+                    <button 
+                        className="btn btn-primary"
+                        onClick={() => addMovieToWatchList(movie)}
+                    >
+                        <i className="far fa-bookmark" /> Add to Watchlist
+                    </button>
+                ) : (
+                    <button 
+                        className="btn btn-secondary"
+                        onClick={() => removeFromWatchList(movie.id)}
+                    >
+                        <i className="far fa-bookmark" /> Remove from Watchlist
+                    </button>
+                )}
+                
             </div>
         </div>
     )

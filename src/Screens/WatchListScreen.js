@@ -21,7 +21,7 @@ const WatchlistScreen = () => {
                     ))}
                 </div>
             ) : (   
-                <h2>You haven't added any movies to your watchlist.</h2>
+                <h2 style={{ textAlign: 'center' }}>You haven't added any movies to your watchlist.</h2>
             )}
         </div>
     )
