@@ -1,6 +1,7 @@
 # WoyoMovies
 
-![movie](https://user-images.githubusercontent.com/69780199/101599683-bedc1b00-3a2c-11eb-8c64-20e40546f665.png)
+![woyomovie](https://user-images.githubusercontent.com/69780199/101761096-549ba700-3b0e-11eb-93b0-6b5b51e04110.png)
+
 
 ## Stack
 React
